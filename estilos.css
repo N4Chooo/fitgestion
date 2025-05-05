@@ -43,7 +43,8 @@ a:visited{
     color:#35C997
 }
 .hover:hover{
-    color:white
+    color:white;
+    cursor: pointer;
 }
 #contacto{
     padding-bottom: 5em;
