@@ -1,0 +1,126 @@
+body{
+    background-color: #35C997;
+    color:white;
+    margin:0px;
+    font-family:arial;
+    font-size:0.5cm
+
+}
+header h1{
+    margin-bottom:-0.5em;
+}
+header{
+    padding-top:2em;
+    padding-bottom:1em;
+    margin-bottom:1em;
+    padding-left:2em;
+    padding-right:2em;
+    background:#121E2C ;
+    font-size:1.1cm;
+    color:white;
+    
+}
+#principal{
+    background:linear-gradient(#121E2C 80%,#35C997);
+}
+header img{
+    width:5cm;
+    height:5cm;
+    float:right;
+    margin-right:3cm;
+    margin-top:-1.7cm
+}
+header h1{
+    margin-right:3cm;
+    margin-top:-1.5cm
+}
+header nav{
+    width:15cm;
+    display:flex;
+    justify-content:space-between
+}
+a:visited{
+    color:#35C997
+}
+.hover:hover{
+    color:white
+}
+#contacto{
+    padding-bottom: 5em;
+    background:#35C997;
+    color: #121E2C;
+    text-align:center;
+}
+#formcon{
+    text-align:center;
+    padding-bottom: 1em;
+    padding-top: 1.5em;
+    font-size:2.5em;
+    margin:0em;
+    color:#121E2C;
+    font-family:arial black;
+    background:#35C997
+}
+#text{
+    width: 16em;
+  height: 5em;
+}
+article img{
+  width: 30em;
+  border-radius: 2em;
+  height: 20em;
+  padding:1em;
+  margin-top: 2em;
+  margin-right: 2em;
+  float: inline-end;
+}
+#qsomos{
+    float: inline-start;
+    border-radius: 2em;
+    margin-left:2em;
+    margin-top:2em;
+    margin-right:2em;
+    margin-bottom:0.5;
+    padding:2em;
+    padding-bottom:0.5em;
+    width: 35em;
+    height: 10em; 
+    background-color: #121E2C;
+}
+#horarios{
+    float: inline-start;
+    border-radius: 2em;
+    margin-left:25em;
+    margin-bottom:1em;
+    margin-right:2em;
+    padding:2em;
+    margin-top:0.5;
+    padding-bottom:0.5em;
+    width: 35em;
+    height: 10em; 
+    background-color: #121E2C; 
+}
+.titulo{
+    font-family:arial black; 
+}
+#clases{
+    width: 11em;
+    height: 15em;
+    padding: 0.2em;
+    padding-left: 0.5em;
+    margin: 0.2em;
+    margin-left: 0.65em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    border-radius: 2em;
+    background-color:#121E2C ;
+    float: inline-start;
+}
+.tit{
+    color:#35C997;
+}
+#selec{
+    text-align:center;
+    margin-top:-2em;
+    margin-bottom:0.5em;
+}
