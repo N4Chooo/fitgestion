@@ -19,23 +19,32 @@ $gestion= new gestion;
         <nav >
             <a href="index.html"class="hover"><h6>Inicio</h6></a>
             <a href="Info.php"class="hover"><h6>Información</h6></a>
+            <a href="productos.php"class="hover"><h6>Productos</h6></a>
             <a href="Contacto.html"class="hover"><h6>Contacto</h6></a>
     </nav>
     
     </header>
-<form action="" method="POST" id="selec">
-            <select name="sel">
-                <option value='x'>Selecciona Uno</option>
-                <option value='3'>Clases</option>
-                <option value='4'>Entrenamientos</option>
-            </select>
-            <input type="text" placeholder="*FILTRO OPCIONAL*  1-15" name="filtro">
-            <input type="submit" value="Selecciona Uno">
-        </form>
+        <footer>
+        <section id="nom">
+        <p>CLASES</p>
+        <p>ENTRENAMIENTOS</p>
+        <p>MEMBRESIA</p>
+        </section>
+        <section id="imag">
+        <a href="clases.php" ><img src=clases.jpg style="width: 27em; height: 25em;"></a>
+        <a href="entrenamiento.php" ><img src=entrenamiento.jpg style="width: 27em; height: 25em;"></a>
+        <a href="membresias.php" ><img src=membresias.jpg style="width: 27em; height: 25em; "> </a>
+</section></footer>
         <?php
           if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($_POST["sel"] == "x"){ 
                 }
+            elseif ($_POST["sel"] == '1'){
+                    if(isset($_POST["filtro"])){
+                     $gestion->drawMembresias($_POST["filtro"]);
+                    }else{
+                    $gestion->drawMembresias(null);}
+            }
             elseif ($_POST["sel"] == '3'){
                 if(isset($_POST["filtro"])){
                  $gestion->drawClases($_POST["filtro"]);

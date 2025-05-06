@@ -1,3 +1,7 @@
+<?php
+require_once "autoload.php";
+$gestion= new gestion;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,22 +15,30 @@
 <body>
     <header>
         <img src=logo.jpg>
-        <h1>CONTACTANOS</h1>
+        <h1>CONSULTA LA INFORMACION</h1>
         <nav >
             <a href="index.html"class="hover"><h6>Inicio</h6></a>
             <a href="Info.php"class="hover"><h6>Información</h6></a>
             <a href="productos.php"class="hover"><h6>Productos</h6></a>
             <a href="Contacto.html"class="hover"><h6>Contacto</h6></a>
     </nav>
+    
     </header>
-    <p id="formcon">RELLENA EL FORMULARIO DE CONTACTO</p>
-<form action="" method="POST" id="contacto">
-            NOMBRE: <input type="text" placeholder="Nombre" required>
-            APELLIDOS: <input type="text" placeholder="Apellidos" required><br><br>
-            MENSAJE:<textarea placeholder="Añade la información" id="text"></textarea>
-            EMAIL: <input type="email" placeholder="Email"required><br>
-            <br><input type="submit" value="CONTACTA">
+    <a href="Info.php" id="flecha"><img src="volver.png" style="width: 2em; height: 2em;"></a>
+    <form action="" method="POST" class="esp">
+            <input type="text" placeholder="*FILTRO OPCIONAL*  1-15" name="filtro">
+            <input type="submit" value="Selecciona Uno">
         </form>
-        
+        <?php
+        $gestion->drawMembresias(null);
+          if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                    if(isset($_POST["filtro"])){
+                     $gestion->drawMembresias($_POST["filtro"]);
+                    }else{
+                    $gestion->drawMembresias(null);}
+            }
+            
+
+        ?>
 </body>
 </html>

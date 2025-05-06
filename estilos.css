@@ -3,7 +3,8 @@ body{
     color:white;
     margin:0px;
     font-family:arial;
-    font-size:0.5cm
+    font-size:0.5cm;
+
 
 }
 header h1{
@@ -18,8 +19,9 @@ header{
     background:#121E2C ;
     font-size:1.1cm;
     color:white;
-    
+  
 }
+
 #principal{
     background:linear-gradient(#121E2C 80%,#35C997);
 }
@@ -66,6 +68,7 @@ a:visited{
     width: 16em;
   height: 5em;
 }
+
 article img{
   width: 30em;
   border-radius: 2em;
@@ -112,7 +115,7 @@ article img{
     margin: 0.2em;
     margin-left: 0.65em;
     padding-top: 0.1em;
-    padding-bottom: 0.1em;
+    padding-bottom: 0.5em;
     border-radius: 2em;
     background-color:#121E2C ;
     float: inline-start;
@@ -122,6 +125,65 @@ article img{
 }
 #selec{
     text-align:center;
-    margin-top:-2em;
+    margin-top:-1em;
     margin-bottom:0.5em;
+}
+#imag img{
+    border-radius: 2em;
+    padding:1em;
+    margin-top: -1.5em;
+    margin-right: 1em;
+    margin-left: 3em;
+    
+  }
+  #nom{
+    color: #121E2C;
+    font-family: arial black;
+    width:37cm;
+    margin-bottom: 1em;
+    padding-left: 14em;
+    display:flex;
+    justify-content:space-between;
+    
+  }
+  footer{
+    float:inline-start;
+  }
+  .esp{
+    text-align:center;
+    margin-top:-3em;
+    margin-bottom:1em;
+}
+#flecha{
+    display: flex;
+    margin-top:-1em;
+    margin-bottom:2em;
+    margin-left: 3em
+}
+.comprar{
+    border:0.1em solid #35C997;
+    border-radius: 2em;
+    margin-right: 1em;
+    margin-left: 0.6em;
+    text-align: center;
+    text-decoration: none;
+    
+}
+.comprar:hover{
+    background-color: #35C997;
+    color: #121E2C;
+    cursor: pointer;
+    text-decoration: none;
+}
+#contratar{
+    margin-top: 2em;
+    text-decoration: none;
+}
+#guardar{
+    margin-top: 1.4em;
+    text-decoration: none;
+}
+#reservar{
+    margin-top: 0.5em;
+    text-decoration: none;
 }

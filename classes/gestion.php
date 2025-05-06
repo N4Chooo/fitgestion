@@ -30,6 +30,7 @@ echo "<div id='clases' >
 <div ><a class='tit'>Fecha:</a> " . $row['fecha'] . "</div> 
 <div ><a class='tit'>Hora inicio:</a> " . $row['hora_inicio'] . "</div>  
 <div ><a class='tit'>Hora fin:</a> " . $row['hora_fin'] . "</div>
+<a href='#'><div class='comprar' id='reservar'>RESERVAR</div></a>
 </div>"; 
 }
 
@@ -60,72 +61,71 @@ echo "<div id='clases' >
 <div ><a class='tit'>Objetivo:</a> " . $row['objetivo'] . "</div>  
 <div ><a class='tit'>Descripción: </a>" . $row['descripción'] . "</div>
 <div ><a class='tit'>Nivel:</a> " . $row['nivel'] . "</div>
+<a href='#'><div class='comprar' id='guardar'>GUARDAR</div></a>
 </div>"; 
 }
 }
-
-}
-
-
-
-       /*CLIENTES
-public function getInfoClientes(){
-    $sql = "SELECT * from clientes";
+/*MEMBRESIA*/
+public function getInfoMembresias(){
+    $sql = "SELECT * from membresias ";
 $result = $this->getconn()->query($sql);
 return $result;
 }
 
-public function getInfoCliente($name){
-    $sql = "SELECT * from clientes where nombre=". $name." ";
+public function getInfoMembresia($name){
+    $sql = "SELECT * from membresias where id_membresia=". $name."";
 $result = $this->getconn()->query($sql);
 return $result;
 }
 
-public function drawClientes($name){
+public function drawMembresias($name){
     if ($name != null){
-    $result = $this->getInfoCliente($name);
-}else{
-    $result = $this->getInfoClientes();  
-}
+        $result = $this->getInfoMembresia($name);
+    }else{
+        $result = $this->getInfoMembresias();  
+    }
 foreach ($result as $row){
-echo "<div class='' >
-<div > <h4>" . $row['id_cliente'] . "</h4></div>
-<div >" . $row['nombre'] . "</div> 
-<div >" . $row['apellidos'] . "</div>  
-<div >" . $row['dni'] . "</div>
-<div > " . $row['email'] . " </div>
-<div > " . $row['telefono'] . "  </div>
-<div >" . $row['direccion'] . "</div>  
-<div >" . $row['fecha_nacimiento'] . "</div>
-<div > " . $row['fecha_registro'] . " </div>
-<div > " . $row['estado'] . "  </div>
+echo "<div id='clases' >
+<div > <h4><a class='tit'> ID:</a> " . $row['id_membresia'] . "</h4></div>
+<div ><a class='tit'>Nombre:</a> " . $row['nombre'] . "</div> 
+<div ><a class='tit'>Precio:</a> " . $row['precio'] . "</div>  
+<div ><a class='tit'>Duración:</a> " . $row['duración_días'] . "</div>
+<div ><a class='tit'>Descripción:</a> " . $row['descripción'] . "</div>
+<a href='#'><div class='comprar' id='contratar'>CONTRATAR</div></a>
 </div>"; 
 }
 }
-VENTAS
-public function getInfoVentas(){
-    $sql = "SELECT * from ventas";
+/*PRODUCTOS*/
+public function getInfoProductos(){
+    $sql = "SELECT * from productos ";
 $result = $this->getconn()->query($sql);
 return $result;
 }
 
-public function getInfoVenta($id){
-    $sql = "SELECT * from ventas where id_venta=". $id." ";
+public function getInfoProducto($name){
+    $sql = "SELECT * from productos where id_producto=". $name."";
 $result = $this->getconn()->query($sql);
 return $result;
 }
-public function drawVentas($id){
-    if ($id != null){
-    $result = $this->getInfoVenta($id);
-}else{
-    $result = $this->getInfoVentas();  
-}
+
+public function drawProductos($name){
+    if ($name != null){
+        $result = $this->getInfoProducto($name);
+    }else{
+        $result = $this->getInfoProductos();  
+    }
 foreach ($result as $row){
-echo "<div class='' >
-<div > <h4>" . $row['id_venta'] . "</h4></div>
-<div >" . $row['id_cliente'] . "</div> 
-<div >" . $row['fecha_venta'] . "</div>  
-<div >" . $row['total'] . "</div>
-</div>"; 
+echo "<div id='clases'>
+<div > <h4><a class='tit'> ID:</a> " . $row['id_producto'] . "</h4></div>
+<div ><a class='tit'>Nombre:</a> " . $row['nombre'] . "</div> 
+<div ><a class='tit'>Precio:</a> " . $row['precio'] . "</div>  
+<div ><a class='tit'>Stock:</a> " . $row['stock'] . "</div>
+<div ><a class='tit'>Categoría:</a> " . $row['categoría'] . "</div><br><br>
+<a href='#'><div class='comprar'>COMPRAR</div></a>
+</div>";
 }
-}*/
+}
+
+}
+
+
