@@ -18,28 +18,23 @@ $gestion= new gestion;
         <h1>CONSULTA LA INFORMACION</h1>
         <nav >
             <a href="index.html"class="hover"><h6>Inicio</h6></a>
-            <a href="Info.php"class="hover"><h6>Información</h6></a>
+            <a href="Info.html"class="hover"><h6>Información</h6></a>
             <a href="productos.php"class="hover"><h6>Productos</h6></a>
             <a href="Contacto.html"class="hover"><h6>Contacto</h6></a>
     </nav>
     
     </header>
-    <a href="Info.php" id="flecha"><img src="volver.png" style="width: 2em; height: 2em;"></a>
+    <a href="Info.html" id="flecha"><img src="volver.png" style="width: 2em; height: 2em;"></a>
     <form action="" method="POST" class="esp">
             <input type="text" placeholder="*FILTRO OPCIONAL*  1-15" name="filtro">
             <input type="submit" value="Selecciona Uno">
         </form>
         
         <?php
-        $gestion->drawEntrenamientos(null);
-          if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            
-                if(isset($_POST["filtro"])){
-                    $gestion->drawEntrenamientos($_POST["filtro"]);
-                   }else{
-                   $gestion->drawEntrenamientos(null);}
-          }
-
+        if(isset($_POST["filtro"])){
+            $gestion->drawEntrenamientos($_POST["filtro"]);
+           }else{
+           $gestion->drawEntrenamientos(null);}
         ?>
 </body>
 </html>
