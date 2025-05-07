@@ -15,7 +15,7 @@ $gestion= new gestion;
 <body>
     <header>
         <img src=logo.jpg>
-        <h1>CONSULTA LA INFORMACION</h1>
+        <h1>CLASES</h1>
         <nav >
             <a href="index.html"class="hover"><h6>Inicio</h6></a>
             <a href="Info.html"class="hover"><h6>Información</h6></a>
