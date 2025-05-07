@@ -4,8 +4,6 @@ body{
     margin:0px;
     font-family:arial;
     font-size:0.5cm;
-
-
 }
 header h1{
     margin-bottom:-0.5em;
@@ -146,7 +144,7 @@ article img{
     justify-content:space-between;
     
   }
-  footer{
+  #footer{
     float:inline-start;
   }
   .esp{
