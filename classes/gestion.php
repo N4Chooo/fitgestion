@@ -21,7 +21,7 @@ public function drawClases($name){
         $result = $this->getInfoClases();  
     }
 foreach ($result as $row){
-echo "<div id='clases' >
+echo "<div id='clases'style='background-color:#121e2cc9' >
 <div > <h4><a class='tit'> ID:</a> " . $row['id_clase'] . "</h4></div>
 <div ><a class='tit'>Nombre:</a> " . $row['nombre'] . "</div> 
 <div ><a class='tit'>Descripción:</a> " . $row['descripción'] . "</div>  
@@ -55,7 +55,7 @@ public function drawEntrenamientos($name){
     $result = $this->getInfoEntrenamientos();  
 }
 foreach ($result as $row){
-echo "<div id='clases' >
+echo "<div id='clases'style='background-color:#121e2cc9' >
 <div > <h4><a class='tit'> ID:</a> " . $row['id_entrenamiento'] . "</h4></div>
 <div ><a class='tit'>Nombre:</a> " . $row['nombre'] . "</div> 
 <div ><a class='tit'>Objetivo:</a> " . $row['objetivo'] . "</div>  
@@ -85,7 +85,7 @@ public function drawMembresias($name){
         $result = $this->getInfoMembresias();  
     }
 foreach ($result as $row){
-echo "<div id='clases' >
+echo "<div id='clases' style='background-color:#121e2cc9'>
 <div > <h4><a class='tit'> ID:</a> " . $row['id_membresia'] . "</h4></div>
 <div ><a class='tit'>Nombre:</a> " . $row['nombre'] . "</div> 
 <div ><a class='tit'>Precio:</a> " . $row['precio'] . "</div>  
@@ -115,7 +115,7 @@ public function drawProductos($name){
         $result = $this->getInfoProductos();  
     }
 foreach ($result as $row){
-echo "<div id='clases'>
+echo "<div id='clases' style='background-color:#121e2cc9'>
 <div > <h4><a class='tit'> ID:</a> " . $row['id_producto'] . "</h4></div>
 <div ><a class='tit'>Nombre:</a> " . $row['nombre'] . "</div> 
 <div ><a class='tit'>Precio:</a> " . $row['precio'] . "</div>  

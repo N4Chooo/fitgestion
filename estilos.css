@@ -80,15 +80,16 @@ article img{
     float: inline-start;
     border-radius: 2em;
     margin-left:2em;
-    margin-top:2em;
+    margin-top:1em;
     margin-right:2em;
-    margin-bottom:0.5;
+    margin-bottom:1;
     padding:2em;
     padding-bottom:0.5em;
     width: 35em;
     height: 10em; 
-    background-color: #121E2C;
 }
+
+
 #horarios{
     float: inline-start;
     border-radius: 2em;
@@ -96,11 +97,10 @@ article img{
     margin-bottom:1em;
     margin-right:2em;
     padding:2em;
-    margin-top:0.5;
+    margin-top:2;
     padding-bottom:0.5em;
     width: 35em;
-    height: 10em; 
-    background-color: #121E2C; 
+    height: 10em;   
 }
 .titulo{
     font-family:arial black; 
@@ -115,7 +115,6 @@ article img{
     padding-top: 0.1em;
     padding-bottom: 0.5em;
     border-radius: 2em;
-    background-color:#121E2C ;
     float: inline-start;
 }
 .tit{
@@ -131,7 +130,7 @@ article img{
     padding:1em;
     margin-top: -1.5em;
     margin-right: 1em;
-    margin-left: 3em;
+    margin-left: 2.5em;
     
   }
   #nom{
