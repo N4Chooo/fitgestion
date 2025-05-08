@@ -32,7 +32,12 @@ $gestion= new gestion;
         
         <?php
         if(isset($_POST["filtro"])){
-            $gestion->drawEntrenamientos($_POST["filtro"]);
+            if($_POST["filtro"] <= 15){
+                $gestion->drawEntrenamientos($_POST["filtro"]);
+            }else{
+                echo "<div id='inf' style='text-align: center; color: #121E2C;'>Elige un numero inferior o igual a 15</div>";
+                $gestion->drawEntrenamientos(null);
+            }
            }else{
            $gestion->drawEntrenamientos(null);}
         ?>

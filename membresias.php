@@ -31,7 +31,12 @@ $gestion= new gestion;
         </form>
         <?php
         if(isset($_POST["filtro"])){
-            $gestion->drawMembresias($_POST["filtro"]);
+            if($_POST["filtro"] <= 15){
+                $gestion->drawMembresias($_POST["filtro"]);
+            }else{
+                echo "<div id='inf' style='text-align: center; color: #121E2C;'>Elige un numero inferior o igual a 15</div>";
+                $gestion->drawMembresias(null);
+            }
            }else{
            $gestion->drawMembresias(null);}
         ?>
